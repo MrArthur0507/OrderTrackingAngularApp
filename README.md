@@ -1,6 +1,6 @@
 # OrderTrackingAngularApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+Frontend part for order tracking microservice project
 
 ## Development server
 
