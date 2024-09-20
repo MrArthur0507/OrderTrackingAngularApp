@@ -3,7 +3,7 @@ import { AuthConfig, JwksValidationHandler, OAuthService } from 'angular-oauth2-
 import { map, Observable, of } from 'rxjs';
 
 const authConfig: AuthConfig = {
-  issuer: 'http://localhost:5000',
+  issuer: 'http://identityserver:5000',
   clientId: 'angular',
   redirectUri: window.location.origin,
   scope: 'openid profile',
