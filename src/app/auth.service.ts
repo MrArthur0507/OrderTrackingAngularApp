@@ -5,7 +5,7 @@ import { map, Observable, of } from 'rxjs';
 const authConfig: AuthConfig = {
   issuer: 'http://bpenchev.info:5000',
   clientId: 'angular',
-  redirectUri: window.location.hostname,
+  redirectUri: window.location.origin,
   scope: 'openid profile',
   responseType: 'code',
   showDebugInformation: true,
