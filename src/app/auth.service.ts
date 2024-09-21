@@ -3,9 +3,9 @@ import { AuthConfig, JwksValidationHandler, OAuthService } from 'angular-oauth2-
 import { map, Observable, of } from 'rxjs';
 
 const authConfig: AuthConfig = {
-  issuer: 'http://identityserver:5000',
+  issuer: 'http://bpenchev.info:5000',
   clientId: 'angular',
-  redirectUri: window.location.origin,
+  redirectUri: window.location.hostname,
   scope: 'openid profile',
   responseType: 'code',
   showDebugInformation: true,
