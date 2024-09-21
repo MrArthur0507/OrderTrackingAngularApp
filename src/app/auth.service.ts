@@ -9,7 +9,8 @@ const authConfig: AuthConfig = {
   scope: 'openid profile',
   responseType: 'code',
   showDebugInformation: true,
-  requestAccessToken: true
+  requestAccessToken: true,
+  requireHttps: false,
 };
 
 @Injectable({
