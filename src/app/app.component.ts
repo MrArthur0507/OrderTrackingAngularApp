@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { map, Observable, of } from 'rxjs';
 import { CatalogItemsComponent } from './catalog-items/catalog-items.component';
 import { AuthService } from './auth.service';
+import { CartComponent } from './cart/cart.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, CatalogItemsComponent],
+  imports: [RouterOutlet, CommonModule, CatalogItemsComponent, CartComponent],
   providers: [AuthService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
