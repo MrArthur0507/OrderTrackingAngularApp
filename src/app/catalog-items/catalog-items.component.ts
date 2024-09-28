@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-catalog-items',
@@ -16,7 +17,7 @@ export class CatalogItemsComponent implements OnInit {
     this.fetchItems();
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private cartService: CartService) {}
 
   fetchItems() {
     const apiUrl = 'http://localhost:5001/api/Catalog/getItems';
@@ -30,6 +31,12 @@ export class CatalogItemsComponent implements OnInit {
       complete: () => {
         console.log('Request completed'); 
       }
+    });
+  }
+
+  addToCart(item : any) {
+    this.cartService.addToCart(item).subscribe({
+      next:() => console.log("added"),
     });
   }
 

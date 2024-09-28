@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { readableStreamLikeToAsyncGenerator } from 'rxjs/internal/util/isReadableStreamLike';
 
 @Component({
   selector: 'app-cart',
@@ -28,6 +29,12 @@ export class CartComponent implements OnInit {
       complete: () => {
         console.log('Fetching finished');
       }
+    });
+  }
+
+  clearCart() {
+    this.cartService.clearCart().subscribe({
+      next: () => this.getCartItems(),
     });
   }
 }
